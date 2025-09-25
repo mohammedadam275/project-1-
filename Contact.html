@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nutritional Explorer</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-XXXXXXX" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class = "site-header">
+    <a href="Home.html" class="logo">Nutrition Explorer</a>
+    <nav>
+  <a href= "Home.html".html>Home</a>
+  <a href="FoodPage.html">Foods</a>
+  <a href="Contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+<section id= "Contact-Page">
+  <div class="Contact-intro">
+    <h1> Contact Us </h1>
+    <p> Have questions or feedback? We'd love to hear from you! Reach out to us by filling out the form below:</p>
+  </div>
+</section>
+
+<form action="https://formspree.io/f/your-form-id" method="POST">
+  <div class = "contact-container">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name:</label>
+    <input type="text" class="form-control" id="name" name="name" required>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email:</label>
+    <input type="email" class="form-control" id="email" name="email" required>
+  </div>
+  <div class="mb-3">
+    <label for="message" class="form-label">Message:</label>
+    <textarea class="form-control" id="message" name="message" rows="8" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+
+<section id = "common-questions">
+  <div class="FAQ">
+    <h2> Frequently Asked Questions </h2>
+    <h3> What is Nutrition Explorer?</h3>
+    <p> Nutrition Explorer is a web application designed to help users learn about healthy foods and their macronutrient content.</p>
+    <h3> How can I use the Food Page?</h3>
+    <p> The Food Page provides a gallery of healthy foods along with their nutritional information. Click on any food item to see detailed macros and ingredients.</p>
+    <h3> Who can I contact for more information?</h3>
+    <p> You can reach out to us using the contact form, or email us directly at abcdefghe@gmail.com.</p>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-XXXXXXX" crossorigin="anonymous"></script>
+</body>
+</html>
