@@ -13,7 +13,7 @@ body {
   width: 850px;        
   height: 350px;
   display: block;
-  margin: 0 auto 1rem auto; /* centers the image and adds bottom spacing */
+  margin: 0 auto 1rem auto; 
   border-style: solid;
 }
 /* Header & logo */
@@ -148,33 +148,33 @@ footer {
 .food-item img {
   width: 200px;        
   height: 210px;        
-  display: block;      /* necessary for centering with margin auto */
-  margin: 0 auto 10px auto;  /* centers horizontally and adds bottom spacing */
+  display: block;      
+  margin: 0 auto 10px auto;  
 }
 
 .food-image-container {
   position: relative;
   display: inline-block;
-  width: 200px;       /* set desired container width */
-  height: 200px;      /* set desired container height */
-  overflow: hidden;   /* hide anything outside the container */
-  text-align: center; /* center inline content horizontally */
-  margin-bottom: 20px; /* adds space below the whole container */
+  width: 200px;       
+  height: 200px;      
+  overflow: hidden;   
+  text-align: center; 
+  margin-bottom: 20px; 
 }
 
 .food-image-container img {
-  max-width: 100%;    /* scale down to fit width */
-  max-height: 100%;   /* scale down to fit height */
-  object-fit: cover;  /* fill container without stretching, crop if necessary */
-  display: block;     /* remove inline spacing issues */
-  margin: 0 auto;     /* horizontally center block image */
+  max-width: 100%;    
+  max-height: 100%;   
+  object-fit: cover; 
+  display: block;     
+  margin: 0 auto;     
 }
 
 .food-image-container .overlay {
   position: absolute;
   top: 0; left: 0;
   width: 100%;
-  height: 100%;  /* now exactly same height as the image */
+  height: 100%;  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,14 +219,14 @@ label {
   margin-bottom: 2px;
 }
 textarea {
-  width: 100%;     /* makes it span the container width */
-  height: 40px;    /* increases input box height */
-  padding: 8px;    /* adds inner space for nicer look */
-  font-size: 16px; /* makes text inside bigger */
+  width: 100%;    
+  height: 40px;    
+  padding: 8px;    
+  font-size: 16px; 
 }
 #message {
-  height: 200px;   /* controls height directly */
-  font-size: 16px; /* makes text inside readable */
+  height: 200px;   
+  font-size: 16px; 
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -236,10 +236,10 @@ textarea {
   position: absolute;
   inset-inline-start: 70px;
   inset-block-start: 250px;
-  padding: 1rem;     /* adds padding around the form */
-  background: white; /* white background for contrast */
-  border-radius: 8px; /* rounded corners */
-  box-shadow: 0 1px 3px rgba(2,6,23,0.08); /* subtle shadow */
+  padding: 1rem;    
+  background: white; 
+  border-radius: 8px; 
+  box-shadow: 0 1px 3px rgba(2,6,23,0.08); 
 }
 .FAQ {
   height: 445px;
@@ -247,8 +247,85 @@ textarea {
   position: absolute;
   inset-inline-start: 850px;
   inset-block-start: 250px;
-  padding: 1rem;     /* adds padding around the form */
-  background: white; /* white background for contrast */
-  border-radius: 8px; /* rounded corners */
-  box-shadow: 0 1px 3px rgba(2,6,23,0.08); /* subtle shadow */
+  padding: 1rem;     
+  background: white; 
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(2,6,23,0.08); 
+}
+/* -------------------------
+   Mobile-friendly adjustments
+--------------------------- */
+@media (max-width: 768px) {
+  /* Make logo image smaller and centered */
+  #logo-container img {
+    width: 90%;
+    height: auto;
+  }
+
+  /* Header/nav adjustments */
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.25rem 0;
+  }
+
+  /* Intro section and headings */
+  #intro, #what-are-macros, #gallery {
+    max-width: 95%;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  /* Macronutrients grid: single column on mobile */
+  #macronutrients {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 95%;
+  }
+
+  /* Nutrient images */
+  .nutrient img {
+    height: auto;
+  }
+
+  /* Food gallery items: full width */
+  .food-item {
+    width: 95%;
+    margin: 1rem auto;
+  }
+
+  .food-image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .food-image-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Ingredients lists centered and responsive */
+  .Ingredients ul {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  /* Contact form and FAQ adjustments */
+  .contact-container, .FAQ {
+    position: static;      /* Remove absolute positioning */
+    width: 95%;
+    margin: 1rem auto;    /* Center on screen */
+    height: auto;          /* Adjust height to content */
+  }
+
+  /* Form fields full width */
+  .contact-container input,
+  .contact-container textarea {
+    width: 100%;
+  }
 }
